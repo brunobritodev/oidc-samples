@@ -16,7 +16,7 @@
     "@babel/polyfill": "^7.2.5",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
-    "bootstrap": "^4.2.1",
+    "bootstrap": "^4.3.1",
     "jquery": "^3.3.1",
     "oidc-client": "^1.6.1",
     "popper.js": "^1.14.6",

@@ -2,23 +2,23 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Waiting...</title>
+    <meta charset="UTF-8">
+    <title>Waiting...</title>
 </head>
 
 <body>
-  <script src="oidc-client.js"></script>
-  <script>
-
-    var mgr = new Oidc.UserManager({userStore: new Oidc.WebStorageStateStore(), loadUserInfo: true, filterProtocolClaims: true});
-    
-    mgr.signinRedirectCallback().then(function (user) {
-      window.location.href = '../';
-    }).catch(function (err) {
-      console.log(err);
-    });
-
-  </script>
+    <script src="oidc-client.js"></script>
+    <script>
+        var mgr = new Oidc.UserManager({
+            response_mode: 'query',
+            userStore: new Oidc.WebStorageStateStore()
+        }).signinRedirectCallback().then(function(user) {
+            console.log("signin response success", user);
+            window.location.href = '../';
+        }).catch(function(err) {
+            console.log(err);
+        });
+    </script>
 </body>
 
 </html>

@@ -5,12 +5,15 @@ import Oidc from 'oidc-client';
 
 var mgr = new Oidc.UserManager({
     userStore: new Oidc.WebStorageStateStore(),
-    authority: 'https://sso.hml.digital-segurosunimed.com/',
-    client_id: 'client-teste',
+    authority: 'https://sso.teste.work',
+    client_id: 'vuejs-demo',
     redirect_uri: window.location.origin + '/static/callback.html',
     response_type: 'code',
-    scope: 'openid profile saude-movi saude-padrao saude-sebrae saude-vivo re-padrao prev-padrao odonto-padrao vida-padrao',
-    post_logout_redirect_uri: window.location.origin,
+    scope: 'openid profile jp_api.user offline_access roles portal_pj',
+    post_logout_redirect_uri: window.location.origin + '/index.html',
+    silent_redirect_uri: window.location.origin + '/static/silent-renew.html',
+    accessTokenExpiringNotificationTime: 10,
+    automaticSilentRenew: true,
     filterProtocolClaims: true,
     loadUserInfo: true
 })

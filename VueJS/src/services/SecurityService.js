@@ -4,7 +4,7 @@ import 'babel-polyfill';
 import Oidc from 'oidc-client';
 
 var mgr = new Oidc.UserManager({
-    userStore: new Oidc.WebStorageStateStore(),
+    userStore: new Oidc.WebStorageStateStore({ store: window.localStorage }),
     authority: 'https://sso.teste.work',
     client_id: 'vuejs-demo',
     redirect_uri: window.location.origin + '/static/callback.html',

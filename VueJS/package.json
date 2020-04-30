@@ -17,7 +17,7 @@
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.2.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "oidc-client": "^1.6.1",
     "popper.js": "^1.14.6",
     "vue": "^2.5.22",
